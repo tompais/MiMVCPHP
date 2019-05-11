@@ -1,0 +1,1 @@
+<h3 class="text-center">El Id de Usuario es <?php var_dump($user->getId()) ?></h3>
