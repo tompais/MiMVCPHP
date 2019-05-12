@@ -44,7 +44,7 @@
 
                 $this->fields[] = $v['Field'];
 
-                if ($v['Key'] == 'PRI') {
+                if (!strcasecmp($v['Key'], 'PRI') && !strcasecmp($v['Field'], 'Id')) {
 
                     // Si hay una PK, la guardo en $pk
 
@@ -133,7 +133,7 @@
 
                 if (in_array($k, $this->fields)) {
 
-                    if ($k == $this->fields['pk']) {
+                    if (!strcasecmp($k, $this->fields['pk'])) {
 
                         // Si es PK, construyo condición WHERE.
 
@@ -302,4 +302,3 @@
             return $this->db->getAll($sql);
         }
     }
-?>
