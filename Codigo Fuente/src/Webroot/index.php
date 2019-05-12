@@ -15,6 +15,13 @@ function getBaseAddress() {
     return substr_replace($url, "", strripos($url, "/src/") + 5);
 }
 
+function throwError404()
+{
+    http_response_code(404);
+    include ROOT . "Views/NoCompletado/noCompletado.php";
+    die();
+}
+
 session_start();
 
 $dispatch = new Dispatcher();
