@@ -13,6 +13,7 @@ class UsuarioController extends Controller
         require_once ROOT . "Models/Usuario.php";
         $user = new Usuario();
         $d['user'] = $user;
+        $d['title'] = "Usuario";
         $this->set($d);
         $this->render(Constantes::USUARIOVIEW);
     }
