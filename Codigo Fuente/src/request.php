@@ -2,6 +2,9 @@
     class Request
     {
         public $url;
+        public $action;
+        public $params;
+        public $controller;
 
         public function __construct()
         {

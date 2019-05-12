@@ -11,4 +11,8 @@ abstract class Constantes
     //Vistas
     const INDEXVIEW = "index";
     const USUARIOVIEW = "usuario";
+
+    //Propiedades Usuario
+    const USUARIONOMBRE = "nombre";
+    const USUARIOAPELLIDO = "apellido";
 }

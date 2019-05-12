@@ -8,11 +8,12 @@
 
 class Usuario extends Model
 {
-    private $id = 1;
-    private $nombre = "gonzalo";
+    private $id;
+    private $nombre;
+    private $apellido;
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getId()
     {
@@ -20,11 +21,27 @@ class Usuario extends Model
     }
 
     /**
-     * @param int $id
+     * @param mixed $id
      */
     public function setId($id)
     {
         $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getApellido()
+    {
+        return $this->apellido;
+    }
+
+    /**
+     * @param mixed $apellido
+     */
+    public function setApellido($apellido)
+    {
+        $this->apellido = $apellido;
     }
 
     /**

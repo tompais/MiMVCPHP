@@ -1,1 +1,2 @@
-<h3 class="text-center">El Id de Usuario es <?php var_dump($user->getId()) ?></h3>
+<h3 class="text-center">Hola <?php echo $user->getNombre() . " " . $user->getApellido() ?></h3>
+<small>El id es tomado de la url. Recomiendo analizar el código</small>
