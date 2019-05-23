@@ -9,7 +9,7 @@
 
         public function __construct(){
 
-            require_once ROOT . 'Config/config.php';
+            require ROOT . 'Config/config.php';
 
             $dbconfig['host'] = $host;
 
