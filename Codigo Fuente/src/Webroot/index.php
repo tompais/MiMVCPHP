@@ -1,12 +1,26 @@
 <?php
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 define('WEBROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_NAME"]));
 define('ROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_FILENAME"]));
 
 require_once ROOT . 'Config/core.php';
-require_once ROOT . 'Helpers/Constantes.php';
 require_once ROOT . 'router.php';
 require_once ROOT . 'request.php';
 require_once ROOT . 'dispatcher.php';
+
+massiveImport('Helpers');
+massiveImport('Utils');
+massiveImport('Models');
+
+function massiveImport($folder)
+{
+    $path = ROOT . $folder . "/*.php";
+    foreach (glob($path) as $filename)
+    {
+        require_once "$filename";
+    }
+}
 
 function throwError404()
 {
